@@ -6,7 +6,7 @@ from .form import TodoForm
 # Create your views here.
 
 
-def index(request):
+def index(request, *args, **kwargs):
     item_list = Todo.objects.order_by("-date")
     if request.method == "POST":
         form = TodoForm(request.POST)

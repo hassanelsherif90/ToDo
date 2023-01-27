@@ -3,6 +3,7 @@ from .models import Todo
 
 
 class TodoForm(forms.ModelForm):
-    class meta:
+    class Meta:
         model = Todo
         fields = "__all__"
+
